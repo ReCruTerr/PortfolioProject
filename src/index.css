@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+ 
+
+:root { 
+   --white:#ffffff;
+   --black:#000000;
+   /* Light mode*/
+   --page-bg: var(--white);
+   --text-color: var(--black);
+      /* Dark mode*/
+   --dark__mode:#000000;
+}
+
+@layer components {  
+   .dark { 
+      --page-bg: var(--black);
+      --text-color: var(--white);
+   } 
+   html,body { 
+      background-color:var(--page-bg);
+      color: var(--text-color) 
+   }
+   .nav__list--active { 
+      @apply relative;
+   }
+   .nav__list--active::before { 
+      @apply  block content-[''] bg-[#5C62EC]  h-[2px] w-full absolute left-0 top-[80%] ;
+   }
+
+   .btn { 
+      @apply flex justify-between items-center relative max-w-[60px] w-full min-h-[26px]  p-[3px]  bg-[#272727] rounded-[50px]
+   } 
+   .btn::before { 
+      @apply  block  max-w-[24px] w-full min-h-[24px] bg-[#fff]  top-[4px] left-[1px] content-[''] rounded-[50%] absolute  ease-in duration-200;
+   }
+   .btn__active--darkmode::before { 
+      @apply left-[35px];
+   }
+}
