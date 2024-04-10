@@ -30,12 +30,36 @@
    }
 
    .btn { 
-      @apply flex justify-between items-center relative max-w-[60px] w-full min-h-[26px]  p-[3px]  bg-[#272727] rounded-[50px]
+      @apply flex justify-between items-center relative  max-w-[60px] w-[100%] min-h-[26px]  p-[3px]  bg-[#272727] rounded-[50px] 
    } 
    .btn::before { 
       @apply  block  max-w-[24px] w-full min-h-[24px] bg-[#fff]  top-[4px] left-[1px] content-[''] rounded-[50%] absolute  ease-in duration-200;
    }
    .btn__active--darkmode::before { 
       @apply left-[35px];
+   } 
+   @media (max-width:580px) { 
+      #navigation { 
+         max-width: 100%;
+         min-height: 110px;
+      }
+      #nav__item { 
+         flex-direction: column;
+         gap: 40px;
+
+      } 
+      #nav__item--second { 
+         display: flex;
+         justify-content: space-between;
+         max-width: 100%;
+         width: 100%;
+         min-height: 30px;
+      }
    }
+   @media (max-width:1120px) { 
+      #projects { 
+         display: flex;
+         gap: 40px 20px ;
+      }
+   } 
 }

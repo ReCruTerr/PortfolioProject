@@ -27,46 +27,59 @@ export default function Nav() {
 
   return (
     <>
-      <nav className=" bg-[#171718] flex items-center justify-center max-w-[100%] min-h-[] text-white  py-5 px-0 ">
-        <div className=" flex max-w-[1200px] w-full py-2 justify-between relative">
+      <nav
+        className=" bg-[#171718] flex items-center justify-center max-w-[100%] min-h-[] text-white  py-5 px-0 "
+        id="navigation"
+      >
+        <div
+          className=" flex max-w-[1300px] w-full py-2 justify-between relative"
+          id="nav__item"
+        >
           <h2 id="papp">
             <NavLink to="/">
               <strong className=" font-bold text-2xl">Freelancer </strong>{" "}
               <span className=" text-xl"> portfolio</span>
             </NavLink>
           </h2>
-          <button
-            onClick={themeChange}
-            className={clsx(
-              "btn",
-              theme === "dark" ? "btn__active--darkmode" : ""
-            )}
+
+          <div
+            className=" flex gap-6 pr-8  max-w-[350px] w-full"
+            id="nav__item--second"
           >
-            <img src="/public/Sun.svg" alt="" className=" relative"></img>
-            <img src="/public/Moon.svg" alt="" className=" relative" />
-          </button>
-          <div className=" flex gap-6">
-            <NavLink
-              to="/skills"
-              id="papp"
-              className={({ isActive }) => (isActive ? active : notActive)}
+            <div className=" flex gap-6 ">
+              <NavLink
+                to="/skills"
+                id="papp"
+                className={({ isActive }) => (isActive ? active : notActive)}
+              >
+                Skills
+              </NavLink>
+              <NavLink
+                to="/contacts"
+                id="papp"
+                className={({ isActive }) => (isActive ? active : notActive)}
+              >
+                Contacts
+              </NavLink>
+              <NavLink
+                to="/projects"
+                id="papp"
+                className={({ isActive }) => (isActive ? active : notActive)}
+              >
+                Projects
+              </NavLink>
+            </div>
+            <button
+              onClick={themeChange}
+              className={clsx(
+                "btn",
+                theme === "dark" ? "btn__active--darkmode" : ""
+              )}
+              id="mode"
             >
-              Skills
-            </NavLink>
-            <NavLink
-              to="/contacts"
-              id="papp"
-              className={({ isActive }) => (isActive ? active : notActive)}
-            >
-              Contacts
-            </NavLink>
-            <NavLink
-              to="/projects"
-              id="papp"
-              className={({ isActive }) => (isActive ? active : notActive)}
-            >
-              Projects
-            </NavLink>
+              <img src="/public/Sun.svg" alt="" className=" relative"></img>
+              <img src="/public/Moon.svg" alt="" className=" relative" />
+            </button>
           </div>
         </div>
       </nav>
