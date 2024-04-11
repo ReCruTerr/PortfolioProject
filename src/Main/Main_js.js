@@ -1,6 +1,6 @@
 export const Projects = [ 
    { 
-      img:'/public/01.svg',
+      img:'/01.svg',
       text:'Gaming streaming portal',
       href:'/#'
 
