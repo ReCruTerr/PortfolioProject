@@ -77,8 +77,8 @@ export default function Nav() {
               )}
               id="mode"
             >
-              <img src="/public/Sun.svg" alt="" className=" relative"></img>
-              <img src="/public/Moon.svg" alt="" className=" relative" />
+              <img src="/Sun.svg" alt="" className=" relative"></img>
+              <img src="/Moon.svg" alt="" className=" relative" />
             </button>
           </div>
         </div>
