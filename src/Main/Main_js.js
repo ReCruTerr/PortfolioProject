@@ -6,31 +6,31 @@ export const Projects = [
 
    },
    { 
-      img:'/public/02.svg',
+      img:'/02.svg',
       text:'Video service',
       href:'/#'
 
    },
    { 
-      img:'/public/03.svg',
+      img:'/03.svg',
       text:'Video portal',     
       href:'/#'
 
    },
    { 
-      img:'/public/04.svg',
+      img:'/04.svg',
       text:'Dating app',
       href:'/#'
 
    },
    { 
-      img:'/public/05.svg',
+      img:'/05.svg',
       text:'Landing',
       href:'/#'
 
    },
    { 
-      img:'/public/06.svg',
+      img:'/06.svg',
       text:'Gaming community',
       href:'/#'
 
